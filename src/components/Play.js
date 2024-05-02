@@ -46,7 +46,7 @@ const Play = () => {
   useEffect(() => {
     const fetchScenarioData = async () => {
       try {
-        const response = await axios.get(`http://api.fortnitemath.com/api/scenario?num_players=${numPlayers}`);
+        const response = await axios.get(`https://api.fortnitemath.com/api/scenario?num_players=${numPlayers}`);
         const { players, player_items } = response.data;
         setScenarioData({ players, player_items });
         setRandomCharacters(getRandomCharacters(numPlayers));
