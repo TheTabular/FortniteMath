@@ -1,0 +1,43 @@
+/* src/styles/App.css */
+@import url('https://fonts.googleapis.com/css2?family=Burbank+Big+Condensed:wght@900&display=swap');
+
+.app {
+  text-align: center;
+  background-color: #121212;
+  min-height: 100vh;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  background-color: #1f1f1f;
+  padding: 20px;
+}
+
+.app-title-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.app-title {
+  font-family: 'Burbank Big Condensed', sans-serif;
+  font-size: 48px;
+  font-weight: 900;
+  margin: 0;
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+.app-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 30px 30px 30px;
+}
+
+.page-title {
+  font-size: 36px;
+}
