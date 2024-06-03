@@ -1,0 +1,328 @@
+.game-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .game-button {
+    display: block;
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    background-color: #444;
+    border: none;
+    margin-bottom: 10px;
+    width: 200px;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .game-button:hover {
+    background-color: #333;
+  }
+  
+  .inventory {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .inventory-slot {
+    width: 80px;
+    height: 80px;
+    margin: 0 2.5px;
+    position: relative;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    background: var(--rarity-color);
+  }
+  
+  .inventory-slot.disabled {
+    pointer-events: none;
+    cursor: default; /* Add this line to set the cursor to default when disabled */
+  }
+  
+  .inventory-slot.empty {
+    background: rgba(0, 0, 0, 0.8);
+  }
+  
+  .inventory-slot:not(.empty) {
+    background: radial-gradient(circle at center, var(--rarity-color) 0%, rgba(0, 0, 0, 0.8) 175%);
+  }
+
+  .inventory-slot.first {
+    margin: 0 10px;
+  }
+  
+  .inventory-item {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+    cursor: pointer;
+  }
+  
+  .quantity {
+    font-size: 14px;
+    font-weight: bold;
+    position: absolute;
+    bottom: 0px;
+    right: 4px;
+    color: #fff;
+  }
+  
+  .scenario-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  
+  .player-container {
+    padding: 15px;
+    background-color: transparent;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 200px;
+    cursor: pointer;
+  }
+  
+  .character-image {
+    width: 80px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .health-shield-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .shield-container,
+  .health-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  
+  .shield-icon,
+  .health-icon {
+    width: 16px;
+    height: auto;
+    margin-right: 5px;
+  }
+  
+  .bar-container {
+    width: 150px;
+    margin-right: 5px;
+    position: relative;
+  }
+  
+  .shield-bar-container {
+    height: 8px;
+  }
+  
+  .health-bar-container {
+    height: 16px;
+  }
+  
+  .bar-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(43, 43, 43, 0.8);
+  }
+  
+  .shield-bar {
+    height: 100%;
+    background-color: #4593f0;
+    position: relative;
+  }
+  
+  .health-bar {
+    height: 100%;
+    background-color: #61c33d;
+    position: relative;
+  }
+  
+  .shield-value,
+  .health-value {
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+    position: absolute;
+    right: -25px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .inventory-slot.selected {
+    border-color: #ffd700;
+    box-shadow: 0 0 5px #ffd700;
+  }
+  
+  .inventory-slot.empty {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  .character-inventory {
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+  }
+  
+  .character-inventory-slot {
+    width: 45px;
+    height: 45px;
+    margin: 0 5px;
+    position: relative;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow: hidden;
+    background: var(--rarity-color);
+  }
+  
+  .character-inventory-slot:not(.empty) {
+    background: radial-gradient(circle at center, var(--rarity-color) 0%, rgba(0, 0, 0, 0.8) 175%);
+  }
+  
+  .character-inventory-item {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+  }
+  
+  .character-inventory-quantity {
+    font-size: 10px;
+    font-weight: bold;
+    position: absolute;
+    bottom: 0px;
+    right: 2px;
+    color: #fff;
+  }
+  
+  .player-container.droppable {
+    cursor: pointer;
+  }
+
+  .player-container.disabled {
+    pointer-events: none;
+    cursor: default;
+  }
+
+  .character-inventory-countdown-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(50, 50, 50, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .character-inventory-countdown {
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  .check-button {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .inventory-slot.first {
+    background-color: #61c33d;
+  }
+  
+  .inventory-slot.first.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+    cursor: not-allowed;
+    background-color: #ccc;
+  }
+
+  .inventory-slot.first.redo {
+    background-color: #4593f0;
+  }
+  
+  .countdown-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+  }
+  
+  .countdown-value {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+  }
+
+.timer {
+  font-size: 100px;
+  margin-bottom: 40px;
+  color: #fff;
+}
+
+  @media (max-width: 600px) {
+    .inventory-slot {
+      width: 50px;
+      height: 50px;
+    }
+
+    .quantity {
+        font-size: 10px;
+        font-weight: bold;
+        position: absolute;
+        bottom: 0px;
+        right: 4px;
+        color: #fff;
+      }
+  }

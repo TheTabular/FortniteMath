@@ -5,7 +5,7 @@ import '../styles/App.css';
 import LandingPage from './LandingPage';
 import HealingItemsPage from './HealingItemsPage';
 import Navigation from './Navigation';
-import Play from './Play';
+import Game from './Game';
 
 const App = () => {
   return (
@@ -20,7 +20,7 @@ const App = () => {
         <Routes>
           <Route exact path="/" element={<LandingPage />} />
           <Route path="/healing-items" element={<HealingItemsPage />} />
-          <Route path="/play" element={<Play />} />
+          <Route path="/game" element={<Game />} />
         </Routes>
       </div>
     </Router>

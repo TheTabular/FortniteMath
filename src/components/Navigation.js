@@ -16,10 +16,10 @@ const Navigation = () => {
         </li>
         <li className="navigation-item">
           <NavLink 
-            to="/play" 
+            to="/game" 
             className={({ isActive }) => isActive ? "navigation-link active" : "navigation-link"}
           >
-            Play
+            Game
           </NavLink>
         </li>
         <li className="navigation-item">

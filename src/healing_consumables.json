@@ -206,8 +206,8 @@
     "max_health": "0",
     "max_shield": "100",
     "health_per": "0",
-    "shield_per": "5", 
-    "time_per": "0.5"
+    "shield_per": "100", 
+    "time_per": "10 "
   },
   "Coconut": {
     "type": "Effective Health Healing",
