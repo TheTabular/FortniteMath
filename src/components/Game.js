@@ -78,7 +78,7 @@ const Game = () => {
 
   const startGame = (numPlayers) => {
     axios
-      .get(`http://localhost:5000/game?num_players=${numPlayers}`)
+      .get(`https://api.fortnitemath.com/game?num_players=${numPlayers}`)
       .then((response) => {
         const initialInventory = { ...response.data.inventory };
         const initialInventoryCopy = JSON.parse(JSON.stringify(initialInventory));
